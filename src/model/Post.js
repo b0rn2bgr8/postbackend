@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/blogdb', console.log('database connection successfull') );
+mongoose.connect('mongodb://localhost:27017/blogdb',{ useNewUrlParser: true }, console.log('database connection successfull') );
 
 const Schema = mongoose.Schema;
 const postSchema = new Schema({
